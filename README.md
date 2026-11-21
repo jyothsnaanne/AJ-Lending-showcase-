@@ -21,9 +21,15 @@ The person's login decides which experience they see.
 
 AJ Lending is a fictional lender. This is a learning and portfolio project, not a real lending product and not legal advice.
 
-<!-- Screenshots: add the images listed in docs/screenshots/README.md, then uncomment
-![Staff dashboard](docs/screenshots/01-staff-dashboard.png)
+## Screenshots
+
+**Applicant view:** credit score, next best steps, existing loans, what is holding the score back, and a late-payment slider.
+
 ![Applicant view](docs/screenshots/02-applicant-view.png)
+
+<!-- Add the staff screenshots here when ready:
+![Staff dashboard](docs/screenshots/01-staff-dashboard.png)
+![Staff review](docs/screenshots/04-detailed-review.png)
 -->
 
 ---
