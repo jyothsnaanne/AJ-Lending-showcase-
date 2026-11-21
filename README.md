@@ -13,7 +13,7 @@ AJ Lending is **one app that serves two kinds of people, and it works differentl
 
 The person's login decides which experience they see.
 
-**Portfolio deck:** [`docs/AJ_Lending_Portfolio.pptx`](docs/AJ_Lending_Portfolio.pptx)
+**Portfolio deck:** [View the slides (PDF)](docs/AJ_Lending_Portfolio.pdf) · [Download the PowerPoint](docs/AJ_Lending_Portfolio.pptx)
 
 **How the numbers are calculated:** [`docs/FORMULAS.md`](docs/FORMULAS.md) (credit score, probability of default, payments, fairness and drift formulas)
 
