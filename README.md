@@ -63,6 +63,31 @@ Five CDK stacks (Data, ML, GenAI, API, Monitoring) deploy everything in `us-east
 
 **MLOps and LLMOps.** A model registry with approval, in-place endpoint updates with a rollback configuration, a PSI drift Lambda with CloudWatch alarms, per-letter token and cost metrics, and offline letter evaluation.
 
+## Skills demonstrated
+
+### Agentic AI
+- **Built a tool-using agent** with the Strands Agents framework, running on Amazon Bedrock AgentCore Runtime (containerized, built with CodeBuild) and powered by Amazon Nova Pro at low temperature for steady answers.
+- **Six tools:** `get_applicant`, `what_if`, `lookup_policy`, `draft_letter`, `compare_applicants` and `portfolio_overview`. The agent decides which to call, in which order, to answer questions such as "compare these two applicants" or "why was this applicant declined?".
+- **One backend for people and agent:** every tool calls the same Lambda API the web app uses, so scoring, permissions and fairness rules exist in one place and the agent cannot see more than the app would.
+- **Guardrails around the AI:** Bedrock Guardrails on outputs, a retrieval step over a policy knowledge base (RAG on S3 Vectors), automatic checks that a letter cites exactly the model's real reasons and no protected terms, and a person approving every letter.
+- **Agent operations:** invoking the deployed agent from scripts, per-request cost and latency tracking, and an offline evaluation of 25 generated letters.
+
+### Data engineering
+- Designed an encrypted S3 data lake and a **PySpark job on AWS Glue** that combines several related tables (applications, bureau history, installment payments, previous applications) into one profile per applicant, 307,511 in all.
+- Registered the data in **Athena** for SQL exploration and loaded profiles into **SageMaker Feature Store** for serving.
+- Kept training and serving features identical with shared derived-ratio code and a **parity test**, avoiding training/serving skew.
+- Handled messy real data: missing values, bureau records without interest rates (estimated and flagged as estimates), and a reproducible train/validation/test split.
+
+### Machine learning
+- Trained **XGBoost** on SageMaker with **monotonic constraints**, so the model's behaviour matches what a credit reviewer would sign off on.
+- Evaluated with **AUC, Gini and KS** (0.741, 0.481, 0.364 for the deployed version) and compared against a logistic-regression baseline.
+- Turned probabilities into a **300 to 850 credit score** using standard scorecard scaling, and chose an explicit decision threshold as a policy choice.
+- Explained every decision with **SHAP reason codes** and built a "path to approval" counterfactual (the smallest loan reduction that flips a decline).
+- Tested **fairness** with Fairlearn and the four-fifths rule, found age bias, removed age proxies and measured the fix (0.632 to 0.825 and 0.965).
+- Ran **MLOps**: model registry with human approval, in-place endpoint updates with rollback, PSI drift monitoring with alarms, and 63 automated tests.
+
+All formulas are written out in [`docs/FORMULAS.md`](docs/FORMULAS.md).
+
 ## Tech stack
 
 | Area | Tools |
