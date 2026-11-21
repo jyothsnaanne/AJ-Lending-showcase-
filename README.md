@@ -78,7 +78,7 @@ With nothing running, the stack costs roughly $1 a month, mostly KMS keys. The s
 
 ## How it was built
 
-I worked with an AI assistant using the principles of AWS's AI-Driven Development Lifecycle: the AI proposes, a person validates, and work moves in short, reviewable steps. I reviewed the design decisions, approved each model version, and tested the results.
+I built this with an AI coding assistant (Claude Code). It proposed designs and wrote code in short steps, and I reviewed the decisions, approved or rejected each model version, and checked the results in the running app.
 
 ---
 
