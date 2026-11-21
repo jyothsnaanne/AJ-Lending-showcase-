@@ -3,6 +3,8 @@
 _Project showcase: deck, demo video and write-up._
 
 > A credit score alone doesn't tell you *why*, or *what to do about it*. AJ Lending predicts the chance an applicant repays, explains the decision in plain words, shows a realistic path to approval, and drafts a policy-grounded letter that a person reviews. It was built end to end on AWS, from raw data to a deployed web app.
+>
+> **It is built for two kinds of users, applicants and staff, and the app looks and works differently for each.**
 
 AJ Lending is **one app that serves two kinds of people, and it works differently for each**.
 
