@@ -4,9 +4,16 @@ _Project showcase: deck, demo video and write-up._
 
 > A credit score alone doesn't tell you *why*, or *what to do about it*. AJ Lending predicts the chance an applicant repays, explains the decision in plain words, shows a realistic path to approval, and drafts a policy-grounded letter that a person reviews. It was built end to end on AWS, from raw data to a deployed web app.
 
-**Portfolio deck:** [`docs/AJ_Lending_Portfolio.pptx`](docs/AJ_Lending_Portfolio.pptx) (18 slides, with speaker notes)
-**Demo video:** _drag your screen recording into this README on github.com, and it will play right here_
-**Source code:** private repository. I'm happy to walk through it or share access on request.
+AJ Lending is **one app that serves two kinds of people, and it works differently for each**.
+
+- **Applicants (clients)** sign in to a personal view: their credit score, their existing loans, what is holding the score back, and a way to apply for new loans or ask an AI assistant questions about their own file.
+- **Staff** sign in to a separate workspace: the list of applicants, a portfolio view, a detailed review of each person with their risk and the reasons behind it, bulk uploads, letters to approve, and an AI agent that can answer questions across many applicants.
+
+The person's login decides which experience they see.
+
+**Portfolio deck:** [`docs/AJ_Lending_Portfolio.pptx`](docs/AJ_Lending_Portfolio.pptx)
+
+**Source code:** private repository, available to share on request.
 
 AJ Lending is a fictional lender. This is a learning and portfolio project, not a real lending product and not legal advice.
 
@@ -82,4 +89,4 @@ I built this with an AI coding assistant.
 
 ---
 
-Built by Jyothsna Anne. The Home Credit dataset belongs to its owners (Kaggle competition terms) and is not included.
+© 2026 Jyothsna Anne. All rights reserved, see [LICENSE](LICENSE). The Home Credit dataset belongs to its owners (Kaggle competition terms) and is not included.
