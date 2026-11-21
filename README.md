@@ -15,6 +15,8 @@ The person's login decides which experience they see.
 
 **Portfolio deck:** [`docs/AJ_Lending_Portfolio.pptx`](docs/AJ_Lending_Portfolio.pptx)
 
+**How the numbers are calculated:** [`docs/FORMULAS.md`](docs/FORMULAS.md) (credit score, probability of default, payments, fairness and drift formulas)
+
 **Source code:** private repository, available to share on request.
 
 AJ Lending is a fictional lender. This is a learning and portfolio project, not a real lending product and not legal advice.
