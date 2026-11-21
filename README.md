@@ -32,30 +32,7 @@ Sign-in is by email through Cognito; a person's group (admin, staff or applicant
 
 ## Architecture
 
-```mermaid
-flowchart LR
-  subgraph Data
-    S3[(S3 data lake<br/>KMS encrypted)] --> Glue[Glue PySpark]
-    Glue --> FS[SageMaker<br/>Feature Store]
-  end
-  subgraph ML
-    FS --> Train[SageMaker training<br/>XGBoost]
-    Train --> Reg[Model Registry<br/>human approval]
-    Reg --> EP[Serverless endpoint]
-  end
-  subgraph App
-    UI[Next.js frontend] --> APIGW[API Gateway<br/>Cognito authorizer]
-    APIGW --> Lambda[Lambda API]
-    Lambda --> EP
-    Lambda --> DDB[(DynamoDB)]
-  end
-  subgraph GenAI
-    Lambda --> Bedrock[Bedrock Nova<br/>+ Guardrails]
-    Bedrock --> KB[Knowledge Base<br/>S3 Vectors]
-    Agent[AgentCore + Strands agent<br/>6 tools] --> Lambda
-  end
-  Lambda --> CW[CloudWatch<br/>alarms and metrics]
-```
+![AJ Lending architecture on AWS](docs/architecture.png)
 
 Five CDK stacks (Data, ML, GenAI, API, Monitoring) deploy everything in `us-east-2`.
 

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 812" width="1200" height="812" font-family="Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#475569"/></marker></defs>
+<rect width="1200" height="812" fill="#ffffff"/>
+<text x="600" y="34" text-anchor="middle" font-size="22" font-weight="800" fill="#0f172a">AJ Lending architecture on AWS</text>
+<rect x="20" y="52" width="1160" height="215" rx="18" fill="#eff6ff" stroke="#2563eb" stroke-opacity=".35"/>
+<text x="38" y="78" font-size="14" font-weight="700" fill="#2563eb" letter-spacing=".5">1 · PEOPLE AND APP</text>
+<rect x="76" y="116" width="68" height="68" rx="16" fill="#2563eb"/>
+<circle cx="110" cy="142" r="8" fill="#fff"/><path d="M95 166 Q95 153 110 153 Q125 153 125 166Z" fill="#fff"/>
+<text x="110" y="204" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Staff + applicants</text>
+<text x="110" y="221" text-anchor="middle" font-size="12.5" fill="#475569">two experiences</text>
+<rect x="266" y="116" width="68" height="68" rx="16" fill="#2563eb"/>
+<rect x="283" y="136" width="34" height="28" rx="4" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M283 144H317" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="289" cy="140" r="1.4" fill="#fff"/><circle cx="294" cy="140" r="1.4" fill="#fff"/>
+<text x="300" y="204" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Web app</text>
+<text x="300" y="221" text-anchor="middle" font-size="12.5" fill="#475569">Next.js · React</text>
+<rect x="466" y="116" width="68" height="68" rx="16" fill="#2563eb"/>
+<rect x="487" y="147" width="26" height="19" rx="4" fill="#fff"/><path d="M492 147V141a8 8 0 0 1 16 0V147" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="500" y="204" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">API Gateway</text>
+<text x="500" y="221" text-anchor="middle" font-size="12.5" fill="#475569">Cognito login · roles</text>
+<rect x="666" y="116" width="68" height="68" rx="16" fill="#2563eb"/>
+<text x="700" y="163" text-anchor="middle" font-size="38" font-weight="700" fill="#fff" font-family="Georgia,serif">λ</text>
+<text x="700" y="92" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Lambda API</text>
+<text x="700" y="109" text-anchor="middle" font-size="12.5" fill="#475569">single backend</text>
+<rect x="886" y="116" width="68" height="68" rx="16" fill="#2563eb"/>
+<ellipse cx="920" cy="139" rx="14" ry="5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M906 139V161a14 5 0 0 0 28 0V139M906 150a14 5 0 0 0 28 0" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="920" y="204" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">DynamoDB</text>
+<text x="920" y="221" text-anchor="middle" font-size="12.5" fill="#475569">applications · letters</text>
+<rect x="1056" y="116" width="68" height="68" rx="16" fill="#ea580c"/>
+<rect x="1075" y="152" width="8" height="13" fill="#fff"/><rect x="1086" y="142" width="8" height="23" fill="#fff"/><rect x="1097" y="135" width="8" height="30" fill="#fff"/>
+<text x="1090" y="204" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">CloudWatch</text>
+<text x="1090" y="221" text-anchor="middle" font-size="12.5" fill="#475569">alarms · cost · drift</text>
+<path d="M146 150H262" fill="none" stroke="#475569" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M338 150H462" fill="none" stroke="#475569" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M538 150H662" fill="none" stroke="#475569" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M738 150H882" fill="none" stroke="#475569" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M738 138Q900 80 1054 138" fill="none" stroke="#ea580c" stroke-width="2.4" stroke-dasharray="6 5" marker-end="url(#a)"/>
+<rect x="20" y="292" width="1160" height="235" rx="18" fill="#f5f3ff" stroke="#7c3aed" stroke-opacity=".35"/>
+<text x="38" y="318" font-size="14" font-weight="700" fill="#7c3aed" letter-spacing=".5">2 · AI AND DECISIONS</text>
+<rect x="296" y="366" width="68" height="68" rx="16" fill="#7c3aed"/>
+<rect x="315" y="392" width="30" height="23" rx="6" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M330 392V385" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="330" cy="383" r="2.5" fill="#fff"/><circle cx="324" cy="402" r="3" fill="#fff"/><circle cx="336" cy="402" r="3" fill="#fff"/>
+<text x="330" y="454" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Staff AI agent</text>
+<text x="330" y="471" text-anchor="middle" font-size="12.5" fill="#475569">Strands · AgentCore · 6 tools</text>
+<rect x="666" y="366" width="68" height="68" rx="16" fill="#7c3aed"/>
+<path d="M703 383L689 403H699L696 417L712 396H701Z" fill="#fff"/>
+<text x="700" y="454" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Scoring endpoint</text>
+<text x="700" y="471" text-anchor="middle" font-size="12.5" fill="#475569">SageMaker · XGBoost</text>
+<rect x="891" y="366" width="68" height="68" rx="16" fill="#7c3aed"/>
+<path d="M925 383Q927 398 942 400Q927 402 925 417Q923 402 908 400Q923 398 925 383Z" fill="#fff"/>
+<text x="925" y="454" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Bedrock Nova</text>
+<text x="925" y="471" text-anchor="middle" font-size="12.5" fill="#475569">letters + chat · Guardrails</text>
+<rect x="1061" y="366" width="68" height="68" rx="16" fill="#7c3aed"/>
+<path d="M1095 389Q1086 384 1078 388V412Q1086 408 1095 413Q1104 408 1112 412V388Q1104 384 1095 389ZM1095 389V413" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1095" y="454" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Policy library</text>
+<text x="1095" y="471" text-anchor="middle" font-size="12.5" fill="#475569">RAG on S3 Vectors</text>
+<path d="M700 190V362" fill="none" stroke="#7c3aed" stroke-width="2.4" marker-end="url(#a)"/>
+<text x="688" y="312" text-anchor="end" font-size="12.5" font-style="italic" fill="#7c3aed">credit score, PD, reasons</text>
+<path d="M738 166Q790 300 925 362" fill="none" stroke="#7c3aed" stroke-width="2.4" marker-end="url(#a)"/>
+<text x="850" y="285" text-anchor="start" font-size="12.5" font-style="italic" fill="#7c3aed">AI letters</text>
+<path d="M961 400H1058" fill="none" stroke="#7c3aed" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M330 362V250H680V190" fill="none" stroke="#7c3aed" stroke-width="2.4" marker-end="url(#a)"/>
+<text x="350" y="243" text-anchor="start" font-size="12.5" font-style="italic" fill="#7c3aed">calls the same API</text>
+<circle cx="955" cy="345" r="12" fill="#fff" stroke="#059669" stroke-width="2.4"/><text x="955" y="350" text-anchor="middle" font-size="13" font-weight="700" fill="#059669">✓</text>
+<text x="974" y="350" font-size="12.5" font-weight="700" fill="#047857">person approves</text>
+<rect x="20" y="557" width="1160" height="235" rx="18" fill="#ecfdf5" stroke="#059669" stroke-opacity=".35"/>
+<text x="38" y="583" font-size="14" font-weight="700" fill="#059669" letter-spacing=".5">3 · DATA AND MODEL FACTORY (RUNS WHEN THE MODEL IS RETRAINED)</text>
+<rect x="76" y="631" width="68" height="68" rx="16" fill="#059669"/>
+<path d="M94 657L99 680H121L126 657" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="110" cy="657" rx="16" ry="5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="110" y="719" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">S3 data lake</text>
+<text x="110" y="736" text-anchor="middle" font-size="12.5" fill="#475569">307,511 applicants</text>
+<rect x="266" y="631" width="68" height="68" rx="16" fill="#059669"/>
+<path d="M284 652H316L304 666V679L296 674V666Z" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="300" y="719" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Glue (PySpark)</text>
+<text x="300" y="736" text-anchor="middle" font-size="12.5" fill="#475569">clean and combine</text>
+<rect x="456" y="631" width="68" height="68" rx="16" fill="#059669"/>
+<rect x="475" y="650" width="13" height="13" rx="2" fill="#fff"/><rect x="475" y="667" width="13" height="13" rx="2" fill="#fff"/><rect x="492" y="650" width="13" height="13" rx="2" fill="#fff"/><rect x="492" y="667" width="13" height="13" rx="2" fill="#fff"/>
+<text x="490" y="719" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Feature Store</text>
+<text x="490" y="736" text-anchor="middle" font-size="12.5" fill="#475569">one profile each</text>
+<rect x="656" y="631" width="68" height="68" rx="16" fill="#059669"/>
+<path d="M676 655L690 665L676 675M690 665L704 655M690 665L704 675" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="676" cy="655" r="4.5" fill="#fff"/><circle cx="676" cy="675" r="4.5" fill="#fff"/><circle cx="690" cy="665" r="5" fill="#fff"/><circle cx="704" cy="655" r="4.5" fill="#fff"/><circle cx="704" cy="675" r="4.5" fill="#fff"/>
+<text x="690" y="719" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">SageMaker training</text>
+<text x="690" y="736" text-anchor="middle" font-size="12.5" fill="#475569">XGBoost · SHAP · fairness</text>
+<rect x="866" y="631" width="68" height="68" rx="16" fill="#059669"/>
+<rect x="886" y="649" width="28" height="32" rx="4" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M893 665L898 671L908 659" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="900" y="719" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Model Registry</text>
+<text x="900" y="736" text-anchor="middle" font-size="12.5" fill="#475569">a person approves</text>
+<path d="M146 665H262" fill="none" stroke="#475569" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M338 665H452" fill="none" stroke="#475569" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M526 665H652" fill="none" stroke="#475569" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M728 665H862" fill="none" stroke="#475569" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M900 629V545Q900 520 875 520H625Q600 520 600 495V400H660" fill="none" stroke="#059669" stroke-width="2.4" marker-end="url(#a)"/>
+<text x="750" y="512" text-anchor="middle" font-size="12.5" font-style="italic" fill="#059669">deploy approved version</text>
+<circle cx="938" cy="630" r="12" fill="#fff" stroke="#059669" stroke-width="2.4"/><text x="938" y="635" text-anchor="middle" font-size="13" font-weight="700" fill="#059669">✓</text>
+<text x="1090" y="610" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Everything is code</text>
+<text x="1090" y="630" text-anchor="middle" font-size="12.5" fill="#475569">5 AWS CDK stacks</text>
+<text x="1090" y="648" text-anchor="middle" font-size="12.5" fill="#475569">KMS encryption</text>
+<text x="1090" y="666" text-anchor="middle" font-size="12.5" fill="#475569">least-privilege IAM</text>
+<text x="1090" y="684" text-anchor="middle" font-size="12.5" fill="#475569">region us-east-2</text>
+<text x="600" y="806" text-anchor="middle" font-size="12" fill="#64748b">Solid arrows: requests and data flow · dashed: monitoring · ✓: a person signs off</text>
+</svg>
