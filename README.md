@@ -44,10 +44,37 @@ AJ Lending is a fictional lender. This is a learning and portfolio project, not 
 | ![Account menu](docs/screenshots/09-account-menu.png) | ![Profile](docs/screenshots/10-profile.png) |
 | **Role and access shown clearly.** | **Personal details stay in the account and never reach scoring, staff screens or the AI.** |
 
-<!-- Add the staff screenshots here when ready:
-![Staff dashboard](docs/screenshots/01-staff-dashboard.png)
-![Staff review](docs/screenshots/04-detailed-review.png)
--->
+### The staff experience
+
+Staff and admins sign in to a different app, marked **Admin console**, with a dark header and a separate menu.
+
+![Applicant list](docs/screenshots/11-staff-applicants.png)
+**The applicant list:** 302 applicants, filterable by source, with each person's decision and a link to the detailed review.
+
+![Detailed review](docs/screenshots/18-staff-review.png)
+**Detailed review:** probability of default, the credit score, the inputs (every edit is logged) and the applicant's existing loans.
+
+![Reasons, scenarios and what-if](docs/screenshots/19-staff-review-reasons.png)
+**Why and what-if:** the main reasons from SHAP, improvement scenarios re-scored by the model, and a what-if calculator for loan amount, term and rate.
+
+![AI analyst summary and agent](docs/screenshots/20-staff-letter-and-agent.png)
+**AI analyst summary:** drafted by Bedrock from the lending policy, with automatic checks (reasons match the model, guardrail passed) and token cost, then approved by a person. Below it, the Ask AI agent.
+
+| Menu | Upload applicants |
+|---|---|
+| ![Staff menu](docs/screenshots/12-staff-menu.png) | ![Upload applicants](docs/screenshots/14-staff-upload.png) |
+| **Applicants, upload, add one, AI chat and staff management.** | **Upload a CSV of up to 200 applicants, or fill in a form. Each is scored right away.** |
+
+| Add an applicant | AI chat across the portfolio |
+|---|---|
+| ![Add an applicant](docs/screenshots/15-staff-add-applicant.png) | ![Staff AI chat](docs/screenshots/16-staff-ai-chat.png) |
+| **The same five-step form that applicants use.** | **The agent compares applicants and answers portfolio and policy questions, next to live portfolio numbers.** |
+
+| Manage staff (admin only) | Account menu |
+|---|---|
+| ![Manage staff](docs/screenshots/17-staff-manage-staff.png) | ![Admin account menu](docs/screenshots/13-staff-account-menu.png) |
+| **Admins invite staff and give or remove access. Everyone else is an applicant.** | **The role and what it can access are always visible.** |
+
 
 ---
 
