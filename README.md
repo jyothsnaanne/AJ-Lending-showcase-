@@ -27,6 +27,23 @@ AJ Lending is a fictional lender. This is a learning and portfolio project, not 
 
 ![Applicant view](docs/screenshots/02-applicant-view.png)
 
+### More of the applicant experience
+
+| Apply for a loan | Loan explorer |
+|---|---|
+| ![Apply](docs/screenshots/05-apply.png) | ![Loan explorer](docs/screenshots/06-loan-explorer.png) |
+| **Five short steps, with the loan type setting the rate.** | **Compare loan types and amounts side by side, each scored on the applicant's own details.** |
+
+| Chat with AI | Menu |
+|---|---|
+| ![AI chat](docs/screenshots/07-ai-chat.png) | ![Menu](docs/screenshots/08-menu.png) |
+| **An assistant that can only see the applicant's own applications.** | **Applicants get four simple screens.** |
+
+| Account menu | Profile |
+|---|---|
+| ![Account menu](docs/screenshots/09-account-menu.png) | ![Profile](docs/screenshots/10-profile.png) |
+| **Role and access shown clearly.** | **Personal details stay in the account and never reach scoring, staff screens or the AI.** |
+
 <!-- Add the staff screenshots here when ready:
 ![Staff dashboard](docs/screenshots/01-staff-dashboard.png)
 ![Staff review](docs/screenshots/04-detailed-review.png)
