@@ -107,7 +107,7 @@ Five CDK stacks (Data, ML, GenAI, API, Monitoring) deploy everything in `us-east
 
 **Generative AI.** Letters are written by Bedrock Nova and grounded in a lending-policy knowledge base (RAG on S3 Vectors). Bedrock Guardrails filter the output, and automatic checks confirm each letter cites exactly the model's real reasons and no protected terms. A person approves every letter.
 
-**Agentic AI.** Both people get an AI agent that chats and does tasks, using tools that call the same Lambda API as the web app, so scoring logic lives in one place. The staff agent (Strands on Bedrock AgentCore) has 15 tools; the applicant agent (Bedrock Nova Pro tool use) has 9 and can only reach that applicant's own files. An agent can only *propose* a change; the person must press Confirm.
+**Agentic AI.** Both people get an AI agent that chats and does tasks, using tools that call the same Lambda API as the web app, so scoring logic lives in one place. The staff agent (Strands on Bedrock AgentCore) has 17 tools; the applicant agent (Bedrock Nova Pro tool use) has 9 and can only reach that applicant's own files. An agent can only *propose* a change; the person must press Confirm.
 
 **Security and privacy.** Least-privilege IAM roles, KMS encryption, Cognito groups, an API authorizer, PII kept out of the API, staff views and AI prompts (a test enforces it), and an AWS Budget with email alerts.
 
@@ -117,7 +117,7 @@ Five CDK stacks (Data, ML, GenAI, API, Monitoring) deploy everything in `us-east
 
 ### Agentic AI
 - **Built a tool-using agent** with the Strands Agents framework, running on Amazon Bedrock AgentCore Runtime (containerized, built with CodeBuild) and powered by Amazon Nova Pro at low temperature for steady answers.
-- **Tools that look things up, calculate, and propose:** look-ups (`get_applicant`, `compare_applicants`, `portfolio_overview`, `lookup_policy`, `list_reminders`), calculators (`what_if`, `try_loan`, `payoff_plan`, `draft_letter`) and change proposals (`propose_application`, `propose_add_applicant`, `propose_edit`, `propose_reminder`, and, for admins only, `propose_invite_staff` and `propose_staff_access`). The agent decides which to call, and in which order, to answer questions such as "compare these two applicants" or "check if I could get a $20,000 car loan, and apply if it looks good".
+- **Tools that look things up, calculate, and propose:** look-ups (`get_applicant`, `list_applicants`, `compare_applicants`, `portfolio_overview`, `lookup_policy`, `list_reminders`), calculators (`what_if`, `try_loan`, `payoff_plan`, `draft_letter`) and change proposals (`propose_application`, `propose_add_applicant`, `propose_decisions`, `propose_edit`, `propose_reminder`, and, for admins only, `propose_invite_staff` and `propose_staff_access`). The agent decides which to call, and in which order, to answer questions such as "compare these two applicants" or "for the first 5 applicants, reject anyone with 3 or more late payments" (it reads the list, checks the rule, and proposes one batch for a person to confirm).
 - **Confirm before change:** a proposal is stored and described by code (not by the AI) and only runs when the signed-in person presses Confirm. Every tool acts as that person, so an applicant's agent cannot reach anyone else's file, and a staff member's agent cannot do admin tasks. Bill payments are not possible: the agent can only calculate what extra payments would do and set a reminder.
 - **One backend for people and agent:** every tool calls the same Lambda API the web app uses, so scoring, permissions and fairness rules exist in one place and the agent cannot see more than the app would.
 - **Guardrails around the AI:** Bedrock Guardrails on outputs, a retrieval step over a policy knowledge base (RAG on S3 Vectors), automatic checks that a letter cites exactly the model's real reasons and no protected terms, and a person approving every letter.
@@ -135,7 +135,7 @@ Five CDK stacks (Data, ML, GenAI, API, Monitoring) deploy everything in `us-east
 - Turned probabilities into a **300 to 850 credit score** using standard scorecard scaling, and chose an explicit decision threshold as a policy choice.
 - Explained every decision with **SHAP reason codes** and built a "path to approval" counterfactual (the smallest loan reduction that flips a decline).
 - Tested **fairness** with Fairlearn and the four-fifths rule, found age bias, removed age proxies and measured the fix (0.632 to 0.825 and 0.965).
-- Ran **MLOps**: model registry with human approval, in-place endpoint updates with rollback, PSI drift monitoring with alarms, and 73 automated tests.
+- Ran **MLOps**: model registry with human approval, in-place endpoint updates with rollback, PSI drift monitoring with alarms, and 76 automated tests.
 
 All formulas are written out in [`docs/FORMULAS.md`](docs/FORMULAS.md).
 
@@ -149,7 +149,7 @@ All formulas are written out in [`docs/FORMULAS.md`](docs/FORMULAS.md).
 | Backend | Lambda, API Gateway, Cognito, DynamoDB, CloudWatch, Budgets, KMS |
 | Infrastructure | AWS CDK (Python), CodeBuild |
 | Frontend | Next.js 15, React 19, TypeScript, Tailwind CSS, Amplify Auth |
-| Quality | pytest (73 tests, no AWS needed), GitHub Actions |
+| Quality | pytest (76 tests, no AWS needed), GitHub Actions |
 
 ## Problems solved along the way
 
