@@ -5,6 +5,8 @@ _Project showcase: deck, demo video and write-up._
 > A credit score alone doesn't tell you *why*, or *what to do about it*. AJ Lending predicts the chance an applicant repays, explains the decision in plain words, shows a realistic path to approval, and drafts a policy-grounded letter that a person reviews. It was built end to end on AWS, from raw data to a deployed web app.
 >
 > **It is built for two kinds of users, applicants and staff, and the app looks and works differently for each.**
+>
+> **It uses agentic AI in both experiences:** assistants that choose tools, look things up and prepare tasks such as applying for a loan or applying a rule to a batch of applicants, and a person confirms every change.
 
 AJ Lending is **one app that serves two kinds of people, and it works differently for each**.
 
@@ -90,6 +92,36 @@ Staff and admins sign in to a different app, marked **Admin console**, with a da
 | Draft adverse-action and analyst letters, human approval | Profile page: name, date of birth, phone, address, password |
 
 Sign-in is by email through Cognito; a person's group (admin, staff or applicant) decides which screens they see. Personal details such as date of birth, phone and address are kept in the user's profile and are never sent to the scoring API, to staff views or to the AI.
+
+## Agentic AI: assistants that do tasks, with a person in control
+
+AJ Lending uses **agentic AI** in both experiences. An agent is more than a chatbot: it decides which tools to use and in what order, calls them, and builds its answer from what they return. Both agents can also **do tasks**, not only answer questions.
+
+| | Staff agent | Applicant agent |
+|---|---|---|
+| Built with | Strands Agents on Amazon Bedrock AgentCore | Amazon Bedrock Nova Pro tool use, inside the API |
+| Tools | 17 | 9 |
+| Can reach | Every applicant | Only that person's own applications |
+| Example task | "For the first 5 applicants, reject anyone with 3 or more late payments" | "Would a $20,000 car loan be approved for me? If it looks good, set it up" |
+
+**What the agents can do**
+- **Look up:** applicants, comparisons, the portfolio, the lending policy and reminders.
+- **Calculate:** what-ifs, how likely different loan options are to be approved, what extra payments would save, and AI letters (which are checked and then approved by a person).
+- **Propose a change, which a person confirms:** a new loan application, an edit to an application, a reminder, a new applicant, a batch of staff decisions (reject, approve or send for review), and, for admins only, inviting staff or changing staff access.
+
+**How a task runs**
+1. You ask in plain words.
+2. The agent plans, calls the tools it needs (for example it reads the first 5 applicants and checks each against the rule), and prepares **one proposal**.
+3. A card appears with a plain summary written by code, not by the AI, for example *"Record 1 staff decision(s): Reject 902627273 (3 or more late payments)"*.
+4. Nothing happens until the signed-in person presses **Confirm**. Cancelling changes nothing, and a proposal expires after 30 minutes.
+5. After confirming, the change is recorded and logged. For decisions, the staff list shows it and the applicant sees it on their own page.
+
+**Safety built in**
+- **An agent can only propose.** Wrong guesses cost nothing because nothing runs without the person's Confirm.
+- **Tools act as the signed-in user.** The AI never sets who is asking, so an applicant's agent cannot read anyone else's file and a non-admin's agent cannot do admin tasks. Tests prove both.
+- **No real payments.** Nothing connects to a bank. If asked to pay a bill, the agent says so, then offers a payoff estimate and a reminder.
+- **Protected data stays out.** Age, gender and other protected characteristics are never used in rules or decisions, and profile details such as date of birth, phone and address are never given to the AI.
+- **Guardrails and audit.** Bedrock Guardrails check the AI's text, and every proposal and confirmation is written to the audit log.
 
 ## Architecture
 
