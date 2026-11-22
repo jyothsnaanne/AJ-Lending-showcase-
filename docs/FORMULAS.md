@@ -193,7 +193,7 @@ passes                  = ratio >= 0.8
 
 Groups with fewer than 100 people are reported but left out of the ratio, so a handful of applicants cannot decide the result by chance. Gender and age bands (under 25, 25 to 40, 40 to 60, 60 and over) are used only to test fairness, never to score. Results: ratios of 0.632 before the fix, and 0.825 and 0.965 after.
 
-## 12. Drift: Population Stability Index (PSI)
+## 13. Drift: Population Stability Index (PSI)
 
 **Where:** `src/credit_risk/metrics.py` → `psi`, `monitoring/drift_lambda.py`
 
@@ -204,6 +204,21 @@ PSI = sum over buckets of (actual% − expected%) × ln(actual% / expected%)
 ```
 
 A PSI **above 0.25** is treated as a significant shift and triggers the CloudWatch alarm. Empty buckets are set to 0.000001 to avoid dividing by zero.
+
+## 12. Extra payments (the AI agent's payoff plan)
+
+**Where:** `src/credit_risk/actions.py` -> `payoff_projection`
+
+A calculation only. No payment is made anywhere. Month by month:
+
+```
+interest   = balance x APR / 100 / 12
+balance    = balance + interest - payment          (repeat until the balance is zero)
+```
+
+It runs this twice: with the current payment, and with `balance - lump sum` paid at `payment + extra per month`. The difference in months and in total interest is what the agent reports. If the payment does not even cover the monthly interest, the loan never pays off and the result says so.
+
+**Example:** $10,000 at 6% with a $500 payment takes 22 months. Adding a $5,000 lump sum shortens that and saves interest.
 
 ---
 
