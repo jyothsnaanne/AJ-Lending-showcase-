@@ -17,7 +17,7 @@ The person's login decides which experience they see.
 
 **Portfolio deck:** [View the slides (PDF)](AJ_Lending_Portfolio.pdf) · [Download the PowerPoint](docs/AJ_Lending_Portfolio.pptx)
 
-**Demo videos:** [Applicant app](https://github.com/jyothsnaanne/AJ-Lending-showcase-/releases/download/demo-videos/AJ-Lending-applicant-demo.mp4) · [Staff app](https://github.com/jyothsnaanne/AJ-Lending-showcase-/releases/download/demo-videos/AJ-Lending-staff-demo.mp4)
+**Demo videos:** [Applicant app](https://github.com/jyothsnaanne/AJ-Lending-showcase-/releases/download/Demo-Videos/Applicant.App.mp4) · [Staff app](https://github.com/jyothsnaanne/AJ-Lending-showcase-/releases/download/Demo-Videos/Staff.App.mp4) · [Release page](https://github.com/jyothsnaanne/AJ-Lending-showcase-/releases/tag/Demo-Videos)
 
 **How the numbers are calculated:** [`docs/FORMULAS.md`](docs/FORMULAS.md) (credit score, probability of default, payments, fairness and drift formulas)
 
