@@ -1,4 +1,4 @@
-# AJ Lending: an AI credit-risk and underwriting copilot on AWS
+﻿# AJ Lending: an AI credit-risk and underwriting copilot on AWS
 
 _Project showcase: deck, demo video and write-up._
 
@@ -16,6 +16,8 @@ AJ Lending is **one app that serves two kinds of people, and it works differentl
 The person's login decides which experience they see.
 
 **Portfolio deck:** [View the slides (PDF)](AJ_Lending_Portfolio.pdf) · [Download the PowerPoint](docs/AJ_Lending_Portfolio.pptx)
+
+**Demo videos:** [Applicant app](https://github.com/jyothsnaanne/AJ-Lending-showcase-/releases/download/demo-videos/AJ-Lending-applicant-demo.mp4) · [Staff app](https://github.com/jyothsnaanne/AJ-Lending-showcase-/releases/download/demo-videos/AJ-Lending-staff-demo.mp4)
 
 **How the numbers are calculated:** [`docs/FORMULAS.md`](docs/FORMULAS.md) (credit score, probability of default, payments, fairness and drift formulas)
 
